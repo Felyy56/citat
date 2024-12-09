@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Huvudsidor -->
+    <url>
+        <loc>https://noel177.netlify.app</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://noel177.netlify.app/quotes</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Kategorisidor -->
+    <url>
+        <loc>https://noel177.netlify.app/kategorier/inspiration</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://noel177.netlify.app/kategorier/motivation</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://noel177.netlify.app/kategorier/personlig-utveckling</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Författarsidor -->
+    <url>
+        <loc>https://noel177.netlify.app/forfattare/albert-einstein</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://noel177.netlify.app/forfattare/maya-angelou</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Statiska sidor -->
+    <url>
+        <loc>https://noel177.netlify.app/om-oss</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://noel177.netlify.app/integritet</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://noel177.netlify.app/kontakt</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Språkalternativ -->
+    <url>
+        <loc>https://noel177.netlify.app/en</loc>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
