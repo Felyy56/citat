@@ -1,1 +1,361 @@
-  
+<!DOCTYPE html>
+<html lang="sv" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Avancerade SEO Meta-taggar -->
+    <title>Inspirerande Citat | Livets Visdom & Motivation</title>
+    <meta name="description" content="Utforska över 1000 unika citat från världens störta tänkare. Daglig inspiration för personlig utveckling, motivation och livets djupaste insikter.">
+    <meta name="keywords" content="inspirerande citat, motivationscitat, visdom, livslärdomar, personlig utveckling, filosofiska citat, motivation, inspiration, livscitat">
+    
+    <!-- Geografiska Meta-taggar -->
+    <meta name="geo.region" content="SE-AB">
+    <meta name="geo.placename" content="Stockholm">
+    <meta name="geo.position" content="59.329;18.068">
+    <meta name="ICBM" content="59.329, 18.068">
+
+    <!-- Open Graph Protocol för Social Media -->
+    <meta property="og:title" content="Inspirerande Citat - Visdom för Livet">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.inspirationalquotes.se">
+    <meta property="og:image" content="https://www.inspirationalquotes.se/og-image.jpg">
+    <meta property="og:description" content="Utforska djupaste visdom från historiens störta tänkare">
+    <meta property="og:locale" content="sv_SE">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Inspirerande Citat">
+    <meta name="twitter:description" content="Daglig visdom för personlig transformation">
+
+    <!-- Favicon och App-ikoner -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-icon.png">
+
+    <!-- Canonical och Alternativa Länkar -->
+    <link rel="canonical" href="https://www.inspirationalquotes.se">
+    <link rel="alternate" hreflang="en" href="https://www.inspirationalquotes.com/en">
+
+    <!-- Preload Kritiska Tillgångar -->
+    <link rel="preload" as="style" href="styles.css">
+    <link rel="preload" as="script" href="quotes.js">
+
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #34a853;
+            --text-color: #202124;
+            --background-color: #f1f3f4;
+            --card-background: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--card-background);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        #searchInput {
+            width: 100%;
+            max-width: 600px;
+            padding: 12px 15px;
+            border: 2px solid var(--primary-color);
+            border-radius: 25px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        #searchInput:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(26, 115, 232, 0.2);
+        }
+
+        #quotes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .quote-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .quote-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .quote-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .quote-author {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .quote-category {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        #no-results {
+            text-align: center;
+            color: #95a5a6;
+            margin-top: 50px;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: var(--card-background);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            #quotes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Strukturerad Header -->
+    <header>
+        <h1>Inspirerande Citat</h1>
+        <p>Visdom från historiens största tänkare</p>
+        <nav aria-label="Huvudnavigation">
+            <ul style="display: flex; justify-content: center; list-style-type: none; margin-top: 15px;">
+                <li style="margin: 0 15px;"><a href="#quotes">Citat</a></li>
+                <li style="margin: 0 15px;"><a href="#categories">Kategorier</a></li>
+                <li style="margin: 0 15px;"><a href="#about">Om Oss</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Huvudinnehåll -->
+    <main>
+        <section id="quotes">
+            <h2 style="text-align: center; margin-bottom: 20px; color: var(--primary-color);">Utforska Visdom</h2>
+            
+            <div class="search-container">
+                <input 
+                    type="search" 
+                    id="searchInput" 
+                    placeholder="Sök efter citat, författare eller tema" 
+                    aria-label="Sök citat"
+                >
+            </div>
+
+            <div id="quotes-grid"></div>
+            <div id="no-results" hidden>Inga citat hittades</div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Inspirerande Citat. Alla rättigheter förbehålls.</p>
+        <div style="margin-top: 10px;">
+            <a href="/integritet">Integritetspolicy</a> | 
+            <a href="/kontakt">Kontakt</a>
+        </div>
+    </footer>
+
+    <!-- Schema.org Strukturerad Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Inspirerande Citat",
+        "url": "https://www.inspirationalquotes.se",
+        "description": "En plattform för daglig inspiration och visdom",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.inspirationalquotes.se/search?q={search_term}",
+            "query-input": "required name=search_term"
+        }
+    }
+    </script>
+
+    <script>
+        // Avancerad sökalgoritm och datahantering
+        class QuoteManager {
+            constructor(quotes) {
+                this.quotes = quotes;
+                this.index = this.createSearchIndex();
+            }
+
+            createSearchIndex() {
+                const index = {};
+                this.quotes.forEach(quote => {
+                    const searchTerms = [
+                        quote.author.toLowerCase(),
+                        quote.quote.toLowerCase(),
+                        quote.category.toLowerCase(),
+                        ...(quote.tags || []).map(tag => tag.toLowerCase())
+                    ];
+
+                    searchTerms.forEach(term => {
+                        if (!index[term]) index[term] = [];
+                        index[term].push(quote);
+                    });
+                });
+                return index;
+            }
+
+            search(query) {
+                if (!query) return this.quotes;
+
+                const lowerQuery = query.toLowerCase();
+                const matchedQuotes = new Set();
+
+                Object.keys(this.index).forEach(term => {
+                    if (term.includes(lowerQuery)) {
+                        this.index[term].forEach(quote => matchedQuotes.add(quote));
+                    }
+                });
+
+                return Array.from(matchedQuotes);
+            }
+        }
+
+        // Initiala citat med rika metadata
+        const QUOTES_DATA = [
+            {
+                id: 1,
+                author: "Albert Einstein",
+                quote: "Kreativitet är intelligens som har roligt.",
+                category: "Inspiration",
+                tags: ["vetenskap", "kreativitet", "intelligens"]
+            },
+            {
+                id: 2,
+                author: "Maya Angelou", 
+                quote: "Du kan inte alltid kontrollera vad som händer, men du kan bestämma dig för att inte låta det reducera dig.",
+                category: "Motståndskraft",
+                tags: ["personlig utveckling", "styrka", "motivation"]
+            },
+            {
+                id: 3,
+                author: "Nelson Mandela",
+                quote: "Utbildning är det mest kraftfulla vapnet du kan använda för att förändra världen.",
+                category: "Lärande",
+                tags: ["utbildning", "förändring", "samhälle"]
+            },
+            {
+                id: 4,
+                author: "Marie Curie",
+                quote: "Ingenting i livet ska fruktas, bara förstås. Nu är tiden att förstå mer, så att vi kan frukta mindre.",
+                category: "Vetenskapen",
+                tags: ["kunskap", "mod", "vetenskap"]
+            }
+        ];
+
+        // Händelsehantering och rendering
+        document.addEventListener('DOMContentLoaded', () => {
+            const quoteManager = new QuoteManager(QUOTES_DATA);
+            const searchInput = document.getElementById('searchInput');
+            const quotesGrid = document.getElementById('quotes-grid');
+            const noResultsMessage = document.getElementById('no-results');
+
+            function renderQuotes(quotes) {
+                quotesGrid.innerHTML = '';
+                
+                if (quotes.length === 0) {
+                    noResultsMessage.hidden = false;
+                } else {
+                    noResultsMessage.hidden = true;
+                    quotes.forEach(quote => {
+                        const quoteElement = document.createElement('article');
+                        quoteElement.classList.add('quote-card');
+                        quoteElement.setAttribute('data-quote-id', quote.id);
+                        quoteElement.innerHTML = `
+                            <blockquote>
+                                <p class="quote-text">"${quote.quote}"</p>
+                                <footer>
+                                    <cite class="quote-author">- ${quote.author}</cite>
+                                    <div class="quote-category">${quote.category}</div>
+                                </footer>
+                            </blockquote>
+                        `;
+                        quotesGrid.appendChild(quoteElement);
+                    });
+                }
+            }
+
+            // Debounce sökfunktion
+            let searchTimeout;
+            searchInput.addEventListener('input', (e) => {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    const results = quoteManager.search(e.target.value);
+                    renderQuotes(results);
+                }, 300);
+            });
+
+            // Initial rendering
+            renderQuotes(QUOTES_DATA);
+        });
+
+        // Performance och Web Vitals tracking
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const metrics = performance.getEntriesByType('navigation')[0];
+                    console.log('Sidladdningstid:', metrics.loadTime);
+                }, 0);
+            });
+        }
+    </script>
+
+    <!-- Analys och tracking (placeholder) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PLACEHOLDER');
+    </script>
+</body>
+</html>
